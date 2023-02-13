@@ -29,6 +29,7 @@ public class MyAutoGenerator {
                 .globalConfig(this::globalConfigBuilder)
                 .packageConfig(this::packageConfigBuilder)
                 .strategyConfig(this::strategyConfigBuilder)
+                .templateConfig(this::tmpConfig)
                 .execute();
     }
 
@@ -125,4 +126,7 @@ public class MyAutoGenerator {
         }
     }
 
+    public void tmpConfig(TemplateConfig.Builder builder) {
+    		builder.controller("/tmp/c.java");
+    }
 }
